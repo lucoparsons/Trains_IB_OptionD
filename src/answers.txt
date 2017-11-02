@@ -1,0 +1,42 @@
+1. The function of a constructor can take inputs (or have them inherently given) to set values to the instance
+variables of the object it is constructing. It then returns an instance of the class.
+
+2. The Engine and Wagon classes are both themselves types of RollingStock, so it is beneficial that they inherit from
+this superclass. An instance of Engine for example, can act as a RollingStock or an Engine, which logically makes sense
+that this should be the case. Polymorphism also allows for minimal duplication of code.
+
+3. (see attached)
+
+6. Standard library collections are useful in that they make code universally understandable, since no unusual or
+non-standard methods or objects are used.
+
+7. Programming in a team generally involves members of the team working on different java classes, whereas an individual
+working alone would code all of the classes themselves. A team of programmers can make use of encapsulated instance
+variables along with accessor and mutator methods, as members of the team work on different classes, in order to
+be able to access the other members' code without altering it.
+
+8.
+(i) Street name will be a string.
+(ii) Building number will be an integer.
+(iii) The indication of whether or not it is a business address will be a boolean.
+
+9. destinationAddress and originAddress will need to be objects of type Address (instead of String). The Parcel class's
+constructor should take values for first/business name, house number, street name, city, & country (for both destination
+and origin addresses) which are then used to create and set new instances of the Address class to the
+destinationAddress and originAddress instance variables. The Parcel class should also have mutator and accessor
+functions to set and get (respectively) the first name or business name, house number, street name, city, and country.
+
+10. The destinationAddress and originAddress classes will be created as subclasses of the Address class. The
+destinationAddress subclass will inherit all the address characteristics from Address, but will also include a String
+containing special instructions for the delivery person. The originAddress subclass, while inheriting all address
+characteristics from Address, will include a Boolean variable that is true if the package has been collected from the
+customer's house, and false if it was collected from the local post office.
+
+11.
+(i) A.mEngines = [ Engine B, new Engine(7) ];
+(ii) A.mEngineCount = 2;
+(iii) A.mWagons = [ Wagon C, new Wagon(214) ];
+
+14. The Train and Wagon classes are totally separate (neither inherits from the other, nor do they inherit from the same
+superclass). Therefore the Train.getWeight() and Wagon.getWeight() functions are entirely different, and there will be
+no compiler error.
